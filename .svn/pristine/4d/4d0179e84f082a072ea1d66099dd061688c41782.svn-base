@@ -1,0 +1,33 @@
+<?php include DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'javascript.php'; ?>    
+<div class="candidatos form">
+<?php echo $this->Form->create('Candidato'); ?>
+	<fieldset>
+		<legend><?php echo __('Novo Candidato'); ?></legend>
+	<?php
+		echo $this->Form->input('nome', array('label' => 'Nome'));
+		echo $this->Form->input('endereco', array('label' => 'Endereço'));
+		echo $this->Form->input('numero', array('label' => 'Número'));
+		echo $this->Form->input('bairro', array('label' => 'Bairro'));
+		echo $this->Form->input('cidade_id');
+		echo $this->Form->input('cep', array('id' => 'cep', 'label' => 'CEP'));
+		echo $this->Form->input('fone', array('label' => 'Fone 1'));
+		echo $this->Form->input('fonecontato1', array('label' => 'Fone 2'));
+		echo $this->Form->input('email', array('label' => 'E-Mail'));
+		echo $this->Form->input('cnh', array('label' => 'CNH'));
+		echo $this->Form->input('categoriacnh', array('label' => 'Categoria CNH'));
+		echo $this->Form->input('estadocivil', array('label' => 'Estado Civil'));
+		echo $this->Form->input('sexo', array('label' => 'Sexo'));
+		echo $this->Form->input('datanascimento', array('label' => 'Data de Nascimento', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 100, 'maxYear' => date('Y')));
+		echo $this->Form->input('naturalidade_id', array('label' => 'Naturalidade'));
+		echo $this->Form->input('grauinstrucao', array('label' => 'Grau de Instrução'));
+		echo $this->Form->input('obs', array('label' => 'Parecer Entrevista'));
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Enviar')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Menu'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Listar Candidatos'), array('action' => 'index')); ?></li>
+	</ul>
+</div>

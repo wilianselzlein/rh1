@@ -1,0 +1,28 @@
+
+div.jAbaContainer { padding:3px; }
+div.jAbaHeader { font-size: 13px;}
+div.jAbaBody {border: solid 1px #CCCCCC; height:100%;}
+
+
+div.jAbaHeader .jTabHeaderHidden { 
+	cursor: pointer;
+	background-image: url(./images/abamiddlenormal.gif);
+	background-repeat: repeat-x;
+	border-left: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+	padding: 3px;
+}
+div.jAbaHeader .jTabHeaderInline {
+	cursor: pointer;
+	background-image: url(./images/abamiddleclick.gif);
+	background-repeat: repeat-x;
+	border-left: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+	padding: 3px;
+}
+div.jAbaBody .jTabBodyHidden { display: none;}
+div.jAbaBody .jTabBodyInline{
+	display: inline;
+	width:100px;
+	height:100px;
+}
