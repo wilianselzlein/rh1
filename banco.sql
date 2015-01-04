@@ -37,3 +37,22 @@ ALTER TABLE `candidatos` add created datetime, add modified datetime;
 ALTER TABLE `candidatos` add situacao varchar(1);
 
 update `candidatos` set situacao = 'A';
+
+
+--VERSAO 4
+
+ALTER TABLE `candidatos` ADD `created` DATETIME NOT NULL , ADD `modified` DATETIME NOT NULL ;
+
+CREATE TABLE IF NOT EXISTS `curriculos` (
+`id` int(11) NOT NULL,
+  `candidato_id` int(11) NOT NULL,
+  `caminho` varchar(200) NOT NULL,
+  `nome` text NOT NULL,
+  `tipo` varchar(100) NOT NULL,
+  `tamanho` int(11) NOT NULL,
+  `created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+ALTER TABLE `curriculos` ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `curriculos` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
