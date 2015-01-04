@@ -11,6 +11,11 @@
 			<?php echo h($candidato['Candidato']['nome']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('CPF'); ?></dt>
+		<dd>
+			<?php echo h($candidato['Candidato']['cpf']); ?>
+			&nbsp;
+		</dd>
                 <dt><?php echo __('Endereço'); ?></dt>
 		<dd>
 			<?php echo h($candidato['Candidato']['endereco']); ?>

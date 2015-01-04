@@ -63,7 +63,7 @@ if (!defined('APP_DIR')) {
  * /app/webroot/index.php
  * define('CAKE_CORE_INCLUDE_PATH', DS . 'home' . DS . 'u100145718' . DS . 'public_html' . DS . 'lib');
 */
-define('CAKE_CORE_INCLUDE_PATH', 'D:' . DS . 'PHP' . DS . 'Xampp' . DS . 'htdocs' . DS . 'rh1' . DS . 'lib');
+//define('CAKE_CORE_INCLUDE_PATH', 'D:' . DS . 'PHP' . DS . 'Xampp' . DS . 'htdocs' . DS . 'rh1' . DS . 'lib');
 
 /**
  * Editing below this line should NOT be necessary.

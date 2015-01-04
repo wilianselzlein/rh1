@@ -38,8 +38,6 @@
 				<a href="#" onclick="showHide('func<?php echo h($candidato['Candidato']['id']);?>')"><?php echo $this->Html->image('close.png', array('alt' => 'Esconder')); ?></a>
 			</h6>
                         <?php echo $this->Html->image('load.gif', array('id' => 'loadingF' . h($candidato['Candidato']['id']), 'style'=> 'display:none')); ?>
-			<p id="func<?php echo h($candidato['Candidato']['id']);?>">
-			</p>
 		</td>
 		<td>
 			<h6>
@@ -70,11 +68,17 @@
 		<td><?php echo $this->Locale->dateTime($candidato['Candidato']['modified']); ?>&nbsp;</td>
 		<td><?php echo $this->Locale->dateTime($candidato['Candidato']['created']); ?>&nbsp;</td>
 		<td class="actions">
+                        <?php echo $this->Html->link(__('Currículo'), array('controller' => 'Curriculos', 'action' => 'view', $candidato['Candidato']['id'])); ?>
 			<?php echo $this->Html->link(__('Funções'), array('controller' => 'CandidatoFuncaos', 'action' => 'candidato', $candidato['Candidato']['id'], true)); ?>
 			<?php echo $this->Html->link(__('Empresas'), array('controller' => 'CandidatoEmpresas', 'action' => 'candidato', $candidato['Candidato']['id'], true)); ?>
 			<?php echo $this->Html->link(__('Visualizar'), array('action' => 'view', $candidato['Candidato']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $candidato['Candidato']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $candidato['Candidato']['id']), null, __('Tem certeza que deseja deletar # %s?', $candidato['Candidato']['id'])); ?>
+		</td>
+        </tr>
+	<tr>
+		<td colspan="13" style="padding: 0px;">
+			<div id="func<?php echo h($candidato['Candidato']['id']);?>" style="margin-bottom: 0px;"></div>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -17,7 +17,10 @@
 		    </td>
 		</tr>
 		<tr style="padding: 0px;">
-		    <td style="padding: 0px; border-bottom:0px" colspan="2">
+		    <td style="padding: 0px; border-bottom:0px">
+			<?php echo $this->Form->input('cfp', array('label' => 'CPF')); ?>
+		    </td>
+		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('endereco', array('label' => 'Endereço')); ?>
 		    </td>
 		    <td style="padding: 0px; border-bottom:0px">
