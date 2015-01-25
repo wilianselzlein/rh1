@@ -39,7 +39,7 @@
 <div class="actions">
 	<h3><?php echo __('Menu'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Editar Candidato'), array('action' => 'edit', $curriculo['Curriculo']['candidato_id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Candidato'), array('controller' => 'candidatos', 'action' => 'edit', $curriculo['Curriculo']['candidato_id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete Currículo'), array('action' => 'delete', $curriculo['Curriculo']['id']), null, __('Tem certeza que desja deletar # %s?', $curriculo['Curriculo']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('Listar Candidatos'), array('controller' => 'candidatos', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Novo Currículo'), array('action' => 'add')); ?> </li>

@@ -1,6 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 App::import('Model', 'CandidatoFuncao');
+App::import('Model', 'Curriculo');
 /**
  * Candidatos Controller
  *
@@ -102,10 +103,21 @@ class CandidatosController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Candidato->create();
+			//debug($this->request->data); die;
 			if ($this->Candidato->save($this->request->data)) {		
+				$arq = $this->request->data['Candidato']['arq'];
 				$candidato_id = $this->Candidato->getLastInsertId(); 
+				if ($arq != null) {
+					$curriculo = new Curriculo();
+					$savedata = array();
+					$savedata['candidato_id'] = $this->Candidato->getLastInsertId();
+					$savedata['arq'] = $arq;
+					$curriculo->create();
+					$curriculo->save($savedata);				
+				}
+
 				$model = new CandidatoFuncao();
-				if (count($this->request->data['CandidatoFuncao']['funcao_id']) > 0) {
+				if ($this->request->data['CandidatoFuncao']['funcao_id'] != null) {
 					for($index=0;$index < count($this->request->data['CandidatoFuncao']['funcao_id']); $index++) {
 					$savedata = array();
 					$savedata['candidato_id'] = $this->Candidato->getLastInsertId();

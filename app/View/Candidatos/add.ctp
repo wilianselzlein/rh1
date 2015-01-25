@@ -2,7 +2,7 @@
 <?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'chosen.html'; ?>
 
 <div class="candidatos form">
-<?php echo $this->Form->create('Candidato'); ?>
+<?php echo $this->Form->create('Candidato', array('type' => 'file')); ?>
 <?php echo $this->html->script("jquery", array('inline'=>false)); ?>
 	<fieldset>
 		<legend><?php echo __('Novo Candidato'); ?></legend>
@@ -82,6 +82,12 @@
 		<tr style="padding: 0px;">
 		    <td style="padding: 0px; border-bottom:0px" colspan="3">
 			<?php echo $this->Form->input('obs', array('label' => 'Parecer Entrevista', 'style' => 'height: 50px;')); ?>
+		    </td>
+		</tr>
+		<tr style="padding: 0px;">
+		    <td style="padding: 0px; border-bottom:0px" colspan="3">
+		    Currículo
+			<?php echo $this->Form->file('arq'); ?>
 		    </td>
 		</tr>
 		</table>
