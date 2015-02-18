@@ -107,7 +107,7 @@ class CandidatosController extends AppController {
 			if ($this->Candidato->save($this->request->data)) {		
 				$arq = $this->request->data['Candidato']['arq'];
 				$candidato_id = $this->Candidato->getLastInsertId(); 
-				if ($arq != null) {
+				if ($arq['size'] > 0) {
 					$curriculo = new Curriculo();
 					$savedata = array();
 					$savedata['candidato_id'] = $this->Candidato->getLastInsertId();
@@ -126,7 +126,7 @@ class CandidatosController extends AppController {
 					$model->save($savedata);
 					}
 				}
-				$this->Session->setFlash(__('Candidato ' . $this->request->data['Candidato']['nome'] . ' salvo. Id ' . $savedata['candidato_id']));
+				$this->Session->setFlash(__('Candidato ' . $this->request->data['Candidato']['nome'] . ' salvo. Id ' . $candidato_id));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('O candidato não pode ser salvo. Tente novamente.'));
@@ -151,6 +151,25 @@ class CandidatosController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Candidato->save($this->request->data)) {
+                            
+                                $arq = $this->request->data['Candidato']['arq'];
+				$candidato_id = $id; 
+				if ($arq['size'] > 0) {
+					$curriculo = new Curriculo();
+                                        $savedata = array();
+                                        
+                                        $curriculo_id = $curriculo->findByCandidatoId($id);
+                                        if (is_array($curriculo_id)) {
+                                            $curriculo_id = $curriculo_id['Curriculo']['id'];
+                                            $savedata['id'] = $curriculo_id;
+                                        }
+					$savedata['candidato_id'] = $id;
+					$savedata['arq'] = $arq;
+                                        //debug($savedata); die;
+					$curriculo->create();
+					$curriculo->save($savedata);				
+				}
+
 				$this->Session->setFlash(__('The candidato has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {

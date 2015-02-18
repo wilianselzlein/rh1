@@ -1,6 +1,6 @@
 <?php include dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'javascript.php'; ?>
 <div class="candidatos form">
-<?php echo $this->Form->create('Candidato'); ?>
+<?php echo $this->Form->create('Candidato', array('type' => 'file')); ?>
 	<fieldset>
 	    <legend><?php echo __('Editar Candidato'); ?></legend>
 	    <h4 style="height:100px; position:absolute; top:11%; left:50%;"><?php echo __('Última alteração: '.$this->data['Candidato']['modified']); ?></h4>
@@ -73,6 +73,12 @@
 		    </td>		    
 		    <td style="padding: 0px; border-bottom:0px">
 			<?php echo $this->Form->input('situacao', array('type' => 'select', 'label' => 'Situação', 'options' => array('A' => 'Ativo', 'I' => 'Inativo', 'P' => 'Pendente'), 'style' => 'width:100%;')); ?>
+		    </td>
+		</tr>
+		<tr style="padding: 0px;">
+		    <td style="padding: 0px; border-bottom:0px" colspan="3">
+		    Currículo
+			<?php echo $this->Form->file('arq'); ?>
 		    </td>
 		</tr>
 		<tr style="padding: 0px;">

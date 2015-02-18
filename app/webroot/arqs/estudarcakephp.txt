@@ -1,0 +1,30 @@
+https://github.com/hugodias/cakeStrap
+ http://blog.erikfigueiredo.com.br/configurar-o-cakephp-para-usar-o-twitter-bootstrap-automaticamente/
+ 
+http://book.cakephp.org/2.0/en/models/data-validation.html
+http://book.cakephp.org/2.0/en/models/data-validation/validating-data-from-the-controller.html
+https://www.google.com.br/?gfe_rd=cr&ei=kyGNU6DKGo289Aaf74CwBg#q=%24this-%3Evalidator%28%29-%3Eremove+%2B+cakephp+
+http://www.waytocode.com/2012/how-to-remove-validation-from-model-in-cakephp/
+http://www.tayron.com.br/blog/111/criando-aparencia-padrao-para-os-campos-de-um-formulario-dentro-do-form-create-do-cakephp
+
+https://github.com/torifat/cake-menu_builder
+
+http://book.cakephp.org/2.0/en/development/errors.html
+https://github.com/ceeram/EmailLogger
+https://github.com/torifat/cake-menu_builder
+https://github.com/radig/auditable
+
+http://www.eyecon.ro/bootstrap-slider/
+http://seiyria.github.io/bootstrap-slider/
+
+http://bakery.cakephp.org/articles/cybercoder/2013/08/28/generating_tree_compatible_with_twitter_bootstrap_nav_subnav
+http://bakery.cakephp.org/articles/marcferna/2012/09/08/google_maps_helper
+http://bakery.cakephp.org/articles/filippi/2012/03/15/treelihelper
+http://bakery.cakephp.org/articles/rightwayindia/2011/06/25/sharethis”_social_media_helper
+http://bakery.cakephp.org/articles/thiagosf/2011/05/27/excelhelper
+http://bakery.cakephp.org/articles/robertross/2011/05/02/cakegrid_7
+http://bakery.cakephp.org/articles/checkitout/2011/04/07/helper_for_icon_retrieval
+http://stackoverflow.com/questions/20647812/model-validation-in-cakephp
+http://stackoverflow.com/questions/19047117/cakephp-2-validating-password-fields
+
+jenkins e sonar com maquina virtual
